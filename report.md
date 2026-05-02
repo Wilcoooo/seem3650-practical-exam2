@@ -1,6 +1,7 @@
 # SEEM3650 Practical Exam Report
 
 Name: Tang Hoi Kin
+
 Student ID: 1155212106
 
 ## Step 2: Shakespeare Character-level Model
