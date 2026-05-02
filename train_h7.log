@@ -1,0 +1,101 @@
+/content/drive/MyDrive/SEEM3650_pe2/nanoGPT/train.py:196: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(dtype == 'float16'))
+Overriding config with config/train_shakespeare_char_h7.py:
+
+out_dir = 'out-shakespeare-char-l7-h7'
+eval_interval = 200
+log_interval = 20
+eval_iters = 20
+always_save_checkpoint = False
+
+wandb_log = False
+
+dataset = 'shakespeare_char'
+gradient_accumulation_steps = 1
+batch_size = 32
+block_size = 128
+
+n_layer = 7
+n_head = 7
+n_embd = 210
+dropout = 0.2
+
+learning_rate = 1e-3
+max_iters = 1000
+lr_decay_iters = 1000
+min_lr = 1e-4
+beta2 = 0.99
+warmup_iters = 50
+
+device = 'cuda' if __import__('torch').cuda.is_available() else 'cpu'
+compile = False
+
+tokens per iteration will be: 4,096
+found vocab_size = 65 (inside data/shakespeare_char/meta.pkl)
+Initializing a new model from scratch
+number of parameters: 3.72M
+num decayed parameter tensors: 30, with 3,744,930 parameters
+num non-decayed parameter tensors: 15, with 3,150 parameters
+using fused AdamW: True
+step 0: train loss 4.2137, val loss 4.2101
+iter 0: loss 4.2175, time 1719.31ms, mfu -100.00%
+iter 20: loss 2.9464, time 73.24ms, mfu 0.44%
+iter 40: loss 2.6506, time 73.99ms, mfu 0.44%
+iter 60: loss 2.5790, time 73.89ms, mfu 0.44%
+iter 80: loss 2.4988, time 74.44ms, mfu 0.44%
+iter 100: loss 2.4912, time 74.59ms, mfu 0.44%
+iter 120: loss 2.4864, time 73.82ms, mfu 0.44%
+iter 140: loss 2.4616, time 75.19ms, mfu 0.44%
+iter 160: loss 2.4116, time 73.96ms, mfu 0.44%
+iter 180: loss 2.4444, time 76.09ms, mfu 0.44%
+step 200: train loss 2.3850, val loss 2.3952
+saving checkpoint to out-shakespeare-char-l7-h7
+iter 200: loss 2.3992, time 1539.89ms, mfu 0.39%
+iter 220: loss 2.4065, time 74.04ms, mfu 0.40%
+iter 240: loss 2.3694, time 74.88ms, mfu 0.40%
+iter 260: loss 2.3280, time 73.81ms, mfu 0.41%
+iter 280: loss 2.3217, time 74.82ms, mfu 0.41%
+iter 300: loss 2.2911, time 75.07ms, mfu 0.41%
+iter 320: loss 2.2830, time 76.56ms, mfu 0.41%
+iter 340: loss 2.2852, time 73.72ms, mfu 0.41%
+iter 360: loss 2.2046, time 74.16ms, mfu 0.42%
+iter 380: loss 2.2303, time 74.61ms, mfu 0.42%
+step 400: train loss 2.1149, val loss 2.1695
+saving checkpoint to out-shakespeare-char-l7-h7
+iter 400: loss 2.2253, time 1527.80ms, mfu 0.38%
+iter 420: loss 2.1560, time 75.40ms, mfu 0.38%
+iter 440: loss 2.1374, time 74.27ms, mfu 0.39%
+iter 460: loss 2.1079, time 75.15ms, mfu 0.39%
+iter 480: loss 2.1356, time 74.76ms, mfu 0.40%
+iter 500: loss 2.0751, time 75.70ms, mfu 0.40%
+iter 520: loss 2.0913, time 75.70ms, mfu 0.40%
+iter 540: loss 2.1274, time 75.02ms, mfu 0.40%
+iter 560: loss 2.0590, time 75.78ms, mfu 0.41%
+iter 580: loss 2.0661, time 74.99ms, mfu 0.41%
+step 600: train loss 1.9381, val loss 2.0210
+saving checkpoint to out-shakespeare-char-l7-h7
+iter 600: loss 2.0427, time 1591.49ms, mfu 0.37%
+iter 620: loss 2.0451, time 76.59ms, mfu 0.38%
+iter 640: loss 2.0013, time 74.95ms, mfu 0.38%
+iter 660: loss 1.9887, time 76.00ms, mfu 0.39%
+iter 680: loss 1.9522, time 74.44ms, mfu 0.39%
+iter 700: loss 1.9597, time 47.90ms, mfu 0.42%
+iter 720: loss 1.9795, time 74.38ms, mfu 0.42%
+iter 740: loss 1.9435, time 76.62ms, mfu 0.42%
+iter 760: loss 1.8615, time 73.23ms, mfu 0.42%
+iter 780: loss 1.9261, time 74.39ms, mfu 0.42%
+step 800: train loss 1.8380, val loss 1.9529
+saving checkpoint to out-shakespeare-char-l7-h7
+iter 800: loss 1.9383, time 1587.16ms, mfu 0.38%
+iter 820: loss 1.9084, time 75.46ms, mfu 0.39%
+iter 840: loss 1.9301, time 75.57ms, mfu 0.39%
+iter 860: loss 1.9191, time 75.76ms, mfu 0.39%
+iter 880: loss 1.8816, time 75.98ms, mfu 0.40%
+iter 900: loss 1.9493, time 76.81ms, mfu 0.40%
+iter 920: loss 1.9341, time 75.70ms, mfu 0.40%
+iter 940: loss 1.9471, time 75.33ms, mfu 0.41%
+iter 960: loss 1.8742, time 75.67ms, mfu 0.41%
+iter 980: loss 1.8680, time 76.44ms, mfu 0.41%
+step 1000: train loss 1.7923, val loss 1.9039
+saving checkpoint to out-shakespeare-char-l7-h7
+iter 1000: loss 1.8435, time 1533.53ms, mfu 0.37%

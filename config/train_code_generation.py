@@ -1,5 +1,5 @@
 
-out_dir = 'out-shakespeare-char'
+out_dir = 'out-code-generation'
 eval_interval = 500
 log_interval = 20
 eval_iters = 50
@@ -7,7 +7,7 @@ always_save_checkpoint = True
 
 wandb_log = False
 
-dataset = 'shakespeare_char'
+dataset = 'code_generation'
 gradient_accumulation_steps = 1
 batch_size = 32
 block_size = 128
