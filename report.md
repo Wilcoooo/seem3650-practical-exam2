@@ -14,18 +14,21 @@ I then trained the Shakespeare character-level BabyGPT model using config/train_
 
 First 5 lines of generated Shakespeare samples:
 
-All before will and is to be maders a way to take
-On the call and be this foul him to bardeth.
+- All before will and is to be maders a way to take
 
-GLOUCESTER:
-When stard God me
+- On the call and be this foul him to bardeth.
+
+- GLOUCESTER:
+
+- When stard God me
+
+- Yours more in heart milend to caus it eyet heir lat;
 
 ## Step 3: Model Architecture Exploration
 
 For my student ID, the last three digits are 106.
 
-- 106 mod 4 = 2
-- Therefore, according to the assignment:
+As 106 mod 4 = 2:
   - the number of layers is fixed at 7
   - the number of heads varies among 2, 3, 5, and 7
 
@@ -38,42 +41,25 @@ I trained the following settings:
 
 The assignment suggests comparing performance at iteration 5000. Since training to iteration 5000 was slower on my setup, I used iteration 1000 consistently across all runs, as allowed by the assignment instructions.
 
-The plot was saved in:
+The plot was saved in:   figures/step3_heads_vs_loss.png
 
-figures/step3_heads_vs_loss.png
+Lowest validation loss achieved: 1.9039
 
-Lowest validation loss achieved:
-
-1.9039
-
-Best settings on my machine:
-
-- Layers: 7
-- Heads: 7
+Best settings on my machine: Layers: 7, Heads: 7
 
 ## Step 4: Training BabyGPT for Code Generation
 
-For my student ID:
+For my student ID: 106 mod 2 = 0
 
-- 106 mod 2 = 0
+Therefore, I used open-source C/C++ code from GitHub to build the dataset in:  data/code_generation/input.txt
 
-Therefore, I used open-source C/C++ code from GitHub to build the dataset in:
+I prepared the dataset using: python    data/code_generation/prepare.py
 
-data/code_generation/input.txt
-
-I prepared the dataset using:
-
-python data/code_generation/prepare.py
-
-Number of tokens in the dataset:
-
-5002942
+Number of tokens in the dataset: 5002942
 
 This satisfies the assignment requirement of having at least 100000 tokens.
 
-I created a new configuration file for this task in:
-
-config/train_code_generation.py
+I created a new configuration file for this task in: config/train_code_generation.py
 
 Then I trained the BabyGPT model for code generation and generated sample outputs.
 
