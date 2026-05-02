@@ -1,4 +1,4 @@
-# SEEM3650 Practical Exam Report
+## SEEM3650 Practical Exam 2 - Report
 
 Name: Tang Hoi Kin
 
@@ -6,11 +6,11 @@ Student ID: 1155212106
 
 ## Step 2: Shakespeare Character-level Model
 
-I prepared the `shakespeare_char` dataset using:
+I prepared the shakespeare_char dataset using:
 
 python data/shakespeare_char/prepare.py
 
-I then trained the Shakespeare character-level BabyGPT model using `config/train_shakespeare_char.py` and generated sample outputs from the trained model.
+I then trained the Shakespeare character-level BabyGPT model using config/train_shakespeare_char.py and generated sample outputs from the trained model.
 
 First 5 lines of generated Shakespeare samples:
 
@@ -22,9 +22,9 @@ When stard God me
 
 ## Step 3: Model Architecture Exploration
 
-For my student ID, the last three digits are `106`.
+For my student ID, the last three digits are 106.
 
-- `106 mod 4 = 2`
+- 106 mod 4 = 2
 - Therefore, according to the assignment:
   - the number of layers is fixed at 7
   - the number of heads varies among 2, 3, 5, and 7
@@ -55,7 +55,7 @@ Best settings on my machine:
 
 For my student ID:
 
-- `106 mod 2 = 0`
+- 106 mod 2 = 0
 
 Therefore, I used open-source C/C++ code from GitHub to build the dataset in:
 
