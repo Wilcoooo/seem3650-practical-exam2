@@ -2,7 +2,7 @@
 
 Name: Tang Hoi Kin
 
-Student ID: 1155212106
+Student ID: 1155212106 
 
 ## Step 2: Shakespeare Character-level Model
 
